@@ -5,8 +5,8 @@ import os
 def do_sql(sql, data=None):
     host = "localhost"
     database = "randomSQL"
-    user = "postgres"  # os.environ["DB_USERNAME"]
-    password = "postgres"  # os.environ["DB_PASSWORD"]
+    user =os.environ["DB_USERNAME"]
+    password = os.environ["DB_PASSWORD"]
 
     try:
         conn = psycopg2.connect(host=host, database=database, user=user, password=password)
